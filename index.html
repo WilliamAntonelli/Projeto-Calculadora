@@ -46,6 +46,19 @@
         position: absolute;
     }
 
+    .clLinha1{
+        width: 4.3ex;
+        height: 3ex;
+        display: inline-block;
+    }
+
+    .clLinha1p{
+        font-size: .35cm;
+        margin-top: 0.5ex;
+        margin-left: 0.9ex;
+        position: fixed
+    }
+
     #idBorderOut{
         border: 5px solid black; 
         background-color:  rgb(202, 198, 198);
@@ -58,6 +71,9 @@
         margin-left: 1.5ex;
     }
 
+    #idclLinha1pMMenos{
+        margin-left: 1.3ex;
+    }
     
 </style>
 
@@ -65,13 +81,33 @@
 
     <section id="idBorderOut">
 
-        <input type="number">
+        <input type="number" id="idTypeNumber">
         
+        <section>
+
+            <div class="clLinha1">
+                <p class="clLinha1p">MC</p>
+            </div>
+            <div class="clLinha1">
+                <p class="clLinha1p">MR</p>
+            </div>
+            <div class="clLinha1">
+                <p class="clLinha1p">M+</p>
+            </div>
+            <div class="clLinha1">
+                <p class="clLinha1p" id= "idclLinha1pMMenos">M-</p>
+            </div>
+            <div class="clLinha1">
+                <p class="clLinha1p">MS</p>
+            </div>
+           
+
+        </section>
 
         <section>
 
             <div>
-                <img src="assets/por.jpg">  <!--Parte das teclas estão com <img> e parte com <p> 
+                <img src="assets/por.jpg" id="idPorcentagem">  <!--Parte das teclas estão com <img> e parte com <p> 
                                             para treinar os dois modos-->
             </div>
             <div>
