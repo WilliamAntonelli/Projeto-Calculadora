@@ -16,6 +16,7 @@
     section{
         padding: 0;
         margin: 0;
+        background-color:  rgb(202, 198, 198);
     }
 
     input{
@@ -25,12 +26,25 @@
     }
 
     div{
-        border: solid black; 
-        background-color:  rgb(202, 198, 198);
-        width: 5ex;
+        
+        background-color:  rgb(245, 241, 241);
+        width: 5.5ex;
         height: 4ex;
         display: inline-block;
+        
     } 
+
+    img{
+        width: 5.5ex;
+        height: 4ex;
+    }
+
+    p{
+      
+        margin-top: 0.8ex;
+        margin-left: 2ex;
+        position: absolute;
+    }
 
     #idBorderOut{
         border: 5px solid black; 
@@ -39,10 +53,16 @@
         margin: 10px;
             
     }
-        
+
+    #idMaisMenos{
+        margin-left: 1.5ex;
+    }
+
+    
 </style>
 
 <body>
+
     <section id="idBorderOut">
 
         <input type="number">
@@ -51,33 +71,17 @@
         <section>
 
             <div>
-
+                <img src="assets/por.jpg">  <!--Parte das teclas estão com <img> e parte com <p> 
+                                            para treinar os dois modos-->
             </div>
             <div>
-                
+                <img src="assets/ce.jpg">
             </div>
             <div>
-                
+                <img src="assets/c.jpg">
             </div>
             <div>
-                
-            </div>
-
-        </section>
-
-        <section>
-
-            <div>
-
-            </div>
-            <div>
-                
-            </div>
-            <div>
-                
-            </div>
-            <div>
-                
+                <img src="assets/voltar.jpg">
             </div>
 
         </section>
@@ -85,33 +89,16 @@
         <section>
 
             <div>
-
+                <img src="assets/um sobre.jpg">
             </div>
             <div>
-                
+                <img src="assets/quadrado.jpg">
             </div>
             <div>
-                
+                <img src="assets/raiz.jpg">
             </div>
             <div>
-                
-            </div>
-
-        </section>
-
-        <section>
-
-            <div>
-
-            </div>
-            <div>
-                
-            </div>
-            <div>
-                
-            </div>
-            <div>
-                
+                <img src="assets/dividir.jpg">
             </div>
 
         </section>
@@ -119,16 +106,16 @@
         <section>
 
             <div>
-
+                <p> 1</p>
             </div>
             <div>
-                
+                <p> 2</p>
             </div>
             <div>
-                
+                <p> 3</p>
             </div>
-            <div>
-                
+            <div id="idTestediv">
+                <img src="assets/vezes.jpg" id="idTesteimg">
             </div>
 
         </section>
@@ -136,16 +123,50 @@
         <section>
 
             <div>
+                <p>4</p>
+            </div>
+            <div>
+                <p>5</p>
+            </div>
+            <div>
+                <p>6</p>
+            </div>
+            <div>
+                <img src="assets/menos.jpg">
+            </div>
 
+        </section>
+
+        <section>
+
+            <div>
+                <p>7</p>
             </div>
             <div>
-                
+                <p>8</p>
             </div>
             <div>
-                
+                <p>9</p>
             </div>
             <div>
-                
+                <img src="assets/mais.jpg">
+            </div>
+
+        </section>
+
+        <section>
+
+            <div>
+                <p id="idMaisMenos">+/-</p>
+            </div>
+            <div>
+                <p>0</p>
+            </div>
+            <div>
+                <p>.</p>
+            </div>
+            <div>
+                <img src="assets/igual.jpg">
             </div>
 
         </section>
