@@ -67,7 +67,7 @@
             
     }
 
-    #idMaisMenos{
+    #idMaisMenosCss{
         margin-left: 1.5ex;
     }
 
@@ -81,42 +81,41 @@
 
     <section id="idBorderOut">
 
-        <input type="number" id="idTypeNumber">
+        <input type="number" id="idCampo" step=".01">
         
         <section>
 
-            <div class="clLinha1">
+            <div class="clLinha1" onclick="memoriaC()">
                 <p class="clLinha1p">MC</p>
             </div>
-            <div class="clLinha1">
+            <div class="clLinha1" onclick="memoriaR()">
                 <p class="clLinha1p">MR</p>
             </div>
-            <div class="clLinha1">
+            <div class="clLinha1" onclick="memoriaMais()">
                 <p class="clLinha1p">M+</p>
             </div>
-            <div class="clLinha1">
+            <div class="clLinha1" onclick="memoriaMenos()">
                 <p class="clLinha1p" id= "idclLinha1pMMenos">M-</p>
             </div>
-            <div class="clLinha1">
+            <div class="clLinha1" onclick="memoriaS()">
                 <p class="clLinha1p">MS</p>
             </div>
-           
 
         </section>
 
         <section>
 
-            <div>
-                <img src="assets/por.jpg" id="idPorcentagem">  <!--Parte das teclas estão com <img> e parte com <p> 
+            <div onclick="porcentagem()">
+                <img src="assets/por.jpg">  <!--Parte das teclas estão com <img> e parte com <p> 
                                             para treinar os dois modos-->
             </div>
-            <div>
+            <div onclick="teclaCe()">
                 <img src="assets/ce.jpg">
             </div>
-            <div>
+            <div onclick="teclaC()">
                 <img src="assets/c.jpg">
             </div>
-            <div>
+            <div onclick="voltar()">
                 <img src="assets/voltar.jpg">
             </div>
 
@@ -124,16 +123,16 @@
 
         <section>
 
-            <div>
+            <div onclick="sobre()">
                 <img src="assets/um sobre.jpg">
             </div>
-            <div>
+            <div onclick="quadrado()">
                 <img src="assets/quadrado.jpg">
             </div>
-            <div>
+            <div onclick="raiz()">
                 <img src="assets/raiz.jpg">
             </div>
-            <div>
+            <div onclick="dividir()">
                 <img src="assets/dividir.jpg">
             </div>
 
@@ -141,16 +140,16 @@
 
         <section>
 
-            <div>
+            <div onclick="numero1()">
                 <p> 1</p>
             </div>
-            <div>
+            <div onclick="numero2()">
                 <p> 2</p>
             </div>
-            <div>
+            <div onclick="numero3()">
                 <p> 3</p>
             </div>
-            <div id="idTestediv">
+            <div onclick="multiplicar()">
                 <img src="assets/vezes.jpg" id="idTesteimg">
             </div>
 
@@ -158,16 +157,16 @@
 
         <section>
 
-            <div>
+            <div onclick="numero4()">
                 <p>4</p>
             </div>
-            <div>
+            <div onclick="numero5()">
                 <p>5</p>
             </div>
-            <div>
+            <div onclick="numero6()">
                 <p>6</p>
             </div>
-            <div>
+            <div onclick="subtrair()">
                 <img src="assets/menos.jpg">
             </div>
 
@@ -175,16 +174,16 @@
 
         <section>
 
-            <div>
+            <div onclick="numero7()">
                 <p>7</p>
             </div>
-            <div>
+            <div onclick="numero8()">
                 <p>8</p>
             </div>
-            <div>
+            <div onclick="numero9()">
                 <p>9</p>
             </div>
-            <div>
+            <div onclick="somar()">
                 <img src="assets/mais.jpg">
             </div>
 
@@ -192,22 +191,198 @@
 
         <section>
 
-            <div>
-                <p id="idMaisMenos">+/-</p>
+            <div onclick="maisMenos()">
+                <p id="idMaisMenosCss">+/-</p>
             </div>
-            <div>
+            <div onclick="numero0()">
                 <p>0</p>
             </div>
-            <div>
+            <div onclick="ponto()">
                 <p>.</p>
             </div>
-            <div>
+            <div onclick="igual()">
                 <img src="assets/igual.jpg">
             </div>
 
         </section>
 
     </section>
+
+    <script>
+        var som = 0 
+        var sub = 0
+        var div = 0
+        var mul = 0
+        var umSinal = 0
+        var umPonto = 0
+        var concatenador = ""
+                                           //funções para pegar os números
+        function numero1() {
+            concatenador = concatenador + 1
+            document.getElementById("idCampo").value = concatenador
+        }
+        function numero2() {
+            concatenador = concatenador + 2
+            document.getElementById("idCampo").value = concatenador
+        }
+        function numero3() {
+            concatenador = concatenador + 3
+            document.getElementById("idCampo").value = concatenador
+        }
+        function numero4() {
+            concatenador = concatenador + 4
+            document.getElementById("idCampo").value = concatenador
+        }
+        function numero5() {
+            concatenador = concatenador + 5
+            document.getElementById("idCampo").value = concatenador
+        }
+        function numero6() {
+            concatenador = concatenador + 6
+            document.getElementById("idCampo").value = concatenador
+        }
+        function numero7() {
+            concatenador = concatenador + 7
+            document.getElementById("idCampo").value = concatenador
+        }
+        function numero8() {
+            concatenador = concatenador + 8
+            document.getElementById("idCampo").value = concatenador
+        }
+        function numero9() {
+            concatenador = concatenador + 9
+            document.getElementById("idCampo").value = concatenador
+        }
+        function numero0() {
+            concatenador = concatenador + 0
+            document.getElementById("idCampo").value = concatenador
+        }
+        function ponto() {
+            if (umPonto == 0) {
+                concatenador = concatenador + "."
+            }
+            umPonto++
+    
+        }
+        function maisMenos() {
+            if (umSinal == 0) {
+                concatenador = "-" + concatenador
+            }
+            umSinal++
+
+            document.getElementById("idCampo").value = concatenador
+        }
+                                  //funções para as operações básicas
+        function somar() {
+            som = concatenador
+            concatenador = ""
+        }
+
+        function subtrair() {
+            sub = concatenador
+            concatenador = ""
+        }
+        function multiplicar() {
+            mul = concatenador
+            concatenador = ""
+        }
+        function dividir() {
+            div = concatenador
+            concatenador = ""
+        }
+
+        function sobre() {
+            concatenador = 1/concatenador
+            document.getElementById("idCampo").value = concatenador
+            concatenador = ""
+        }
+        function raiz() {
+            concatenador = concatenador ** 0.5
+            document.getElementById("idCampo").value = concatenador
+            concatenador = ""
+        }
+        function quadrado() {
+            concatenador = concatenador * concatenador
+            document.getElementById("idCampo").value = concatenador
+            concatenador = ""
+        }
+        function voltar() {
+            concatenador = ""
+            document.getElementById("idCampo").value = concatenador
+        }
+        function teclaC() {
+            var som = 0 
+            var sub = 0
+            var div = 0
+            var mul = 0
+            var umSinal = 0
+            var umPonto = 0
+            concatenador = ""
+            document.getElementById("idCampo").value = concatenador
+        }
+        function teclaCe() {
+            concatenador = ""
+            document.getElementById("idCampo").value = concatenador
+        }
+
+        function porcentagem() {
+            if (som != 0) {
+                concatenador = Number(som) + (Number(concatenador) / 100) * Number(som)
+                som = 0
+
+            } else if (sub != 0) {
+                concatenador = Number(sub) - (Number(concatenador) / 100) * Number(sub)
+                sub = 0
+
+            } else if (mul != 0) {
+                concatenador = (Number(concatenador) / 100) * Number(mul)
+                mul = 0
+
+            } else if (div != 0) {
+                concatenador = (100 / Number(concatenador)) * Number(div)
+                div = 0
+            } else {
+                concatenador = ""
+                
+            }{
+                
+            }{
+                
+            }{
+                
+            }
+            document.getElementById("idCampo").value = concatenador
+            concatenador = ""
+        }
+
+        function igual() {
+            if (som != 0) {
+                concatenador = Number(concatenador) + Number(som)
+                som = 0
+
+            } else if (sub != 0) {
+                concatenador = Number(sub) - Number(concatenador)
+                sub = 0
+
+            } else if (mul != 0) {
+                concatenador = Number(concatenador) * Number(mul)
+                mul = 0
+
+            } else if (div != 0) {
+                concatenador = Number(div) / Number(concatenador)
+                div = 0
+
+            }{
+                
+            }{
+                
+            }{
+                
+            }
+            document.getElementById("idCampo").value = concatenador
+            concatenador = ""
+        }
+    </script>
     
 </body>
 </html>
