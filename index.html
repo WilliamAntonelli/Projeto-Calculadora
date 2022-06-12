@@ -20,8 +20,6 @@
     }
 
     input{
-
-        display: block;
         margin-bottom: 5ex;
     }
 
@@ -50,7 +48,13 @@
         width: 4.3ex;
         height: 3ex;
         display: inline-block;
+        
     }
+
+    .clLinha1:hover {                  /*hover somente para primeira linha*/
+        background-color: rgb(236, 58, 14);
+
+    } 
 
     .clLinha1p{
         font-size: .35cm;
@@ -83,6 +87,8 @@
 
         <input type="number" id="idCampo" step=".01">
         
+        <output id="idOut"></output>
+
         <section>
 
             <div class="clLinha1" onclick="memoriaC()">
@@ -213,6 +219,7 @@
         var sub = 0
         var div = 0
         var mul = 0
+        var memoria = 0
         var umSinal = 0
         var umPonto = 0
         var concatenador = ""
@@ -381,6 +388,27 @@
             }
             document.getElementById("idCampo").value = concatenador
             concatenador = ""
+        }
+                                           //funções para as memórias
+        function memoriaS() {
+            memoria = Number(concatenador)
+            document.getElementById("idOut").value = "M"
+        }
+        function memoriaMais() {
+            memoria = memoria + Number(concatenador)
+            document.getElementById("idOut").value = "M"
+        }
+        function memoriaMenos() {
+            memoria = memoria - Number(concatenador)
+            document.getElementById("idOut").value = "M"
+        }
+        function memoriaR() {
+            concatenador = memoria
+            document.getElementById("idCampo").value = concatenador
+        }
+        function memoriaC() {
+            memoria = 0
+            document.getElementById("idOut").value = ""
         }
     </script>
     
